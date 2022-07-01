@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=0.1">
+<title>Contact Page</title>
+<link rel="icon" type="image/png"  href="favicon.png">
+<style>
+	*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	}
+	
+	.contain{
+	width:100%;
+	height: 100vh;
+	background:  #F3EBF6;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	}
+	
+	form{
+	background: white;
+	display: flex;
+	flex-direction: column;
+	padding: 2vw 4vw;
+	width: 90%;
+	max-width: 600px;
+	border-radius: 10px;
+	}
+	
+	form h3{
+	color: #EE82EE;
+	font-weight: 800;
+	margin-bottom: 20px;
+	padding-left: 20px;
+	padding-top: 20px;
+	}
+	
+	form input, form textarea{
+	border: 0;
+	margin: 10px 0;
+	padding: 20px;
+	outline: none;
+	background: white;
+	font-size: 16px;
+	}
+	
+	form button{
+	padding: 15px;
+	background: linear-gradient(to right, #9C27B0, #E040FB);
+	color: white;
+	font-size: 18px;
+	border: 0;
+	outline: none;
+	cursor: pointer;
+	width: 150px;
+	margin: 22px auto;
+	border-radius: 30px;
+	}
+</style>
+</head>
+<body>
+  <div class="contain">
+  		<form onsubmit="sendEmail(); reset();">
+  		    <h3>Let us Connect!</h3>
+  		    <input type="text" id="name" placeholder="Your Name" required>
+  		    <input type="email" id="email" placeholder="Email ID" required>
+  		    <input type="text" id="phone" placeholder="Phone Number" required>
+  		    <textarea type="message" id="message" rows="5" placeholder="How can we help you?" required></textarea>
+  		    <button type="submit">Send</button>
+  		</form>
+  </div>
+  <script src=" https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+     function sendEmail(){
+    	 Email.send({
+    		    Host : "smtp.gmail.com",
+    		    Username : "f20191357@hyderabad.bits-pilani.ac.in",
+    		    Password : "Gmail@123",
+    		    To : 'f20191357@hyderabad.bits-pilani.ac.in',
+    		    From : document.getElementById("email").value,
+    		    Subject : "New Issue with Online Book Store",
+    		    Body : "Name: "+ document.getElementById("name").value
+    		           + "<br> Email: " + document.getElementById("email").value
+    		           + "<br> Phone Number: " + document.getElementById("phone").value
+    		           + "<br> Message: " + document.getElementById("message").value
+    		}).then(
+    		  message => alert("Message Sent Successfully!")
+    		);
+     }
+  </script>
+</body>
+</html>

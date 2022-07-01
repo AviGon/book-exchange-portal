@@ -1,0 +1,193 @@
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>View Books</title>
+	<link rel="icon" type="image/png"  href="favicon.png">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap" rel="stylesheet">
+
+
+	<style>
+	*{
+		box-sizing: border-box;
+	}	
+	body
+	{
+		background-image: url("homepage2.jpg");
+		background-size: cover;
+		padding: 0;
+		margin: 0;
+	}
+	
+	li, a, button {
+	font-family: 'Lato', sans-serif;
+	font-weight: 500;
+	font-size: 30px;
+	color: #7FFFD4;
+	text-decoration: none;
+	}
+	
+	header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px 0px;
+	}
+	
+	#topmid{
+		border:0px solid black;
+		color: #7FFFD4;
+		text-align: center;
+		font-weight: bold;
+		margin-top: 0px;
+		/*padding-left: 30%;*/
+		font-style: italic;
+		font-size:38px;
+	}
+	
+	.nav{
+	list-style: none;
+	
+	}
+	
+	.nav li{
+	display: inline-block;
+	padding: 0px 10px;
+	}
+	
+	.nav li a{
+	transition: all 0.3s ease 0s;
+	}
+	
+	.nav li a:hover{
+	color: red;
+	transition: all 0.3s ease 0s;
+	}
+	
+	button{
+	padding: 2px 25px;
+	background-color: rgba(0,136,13619,1);
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+	}
+	
+	button:hover {
+	background-color: rgba(0,136,13619,0.8);
+	}
+	
+	a:hover{
+		color:red;
+	}
+	a:link{
+		color: green;
+		text-decoration: none;
+	}
+	.tab{
+		border:1px black solid;
+		background-color: #f0fff0;
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+		border-collapse: collapse;
+		max-width: 1000px;
+		color:blue;
+		margin: auto;
+		font-family: sans-serif;
+		font-weight: bold;
+		font-style:normal;
+		text-align:center;
+		font-size: 22px;
+		margin-bottom:10px;
+		padding:10px;
+		padding-top:2px;
+	}
+	.home{
+		border:1px black solid;
+		background-color: #ccffcc;
+		margin-left: 1%;
+		width:200px;
+		color:blue;
+		font-weight: bold;
+		font-style:italic;
+		text-align:center;
+		font-size: 25px;
+		margin-bottom:10px;
+		padding:10px;
+		float:left;
+		clear:both;
+	}
+	table{
+		border:2px solid black;
+		text-align: center;
+		padding:5px;
+		cellspacing:2px;
+		width:680px;
+	}
+	tr:hover {
+	font-weight: bold;
+    color: #009879;
+		border-bottom: 1px solid #dddddd;
+		/*background-color: #FFE5CC;*/
+	}
+	td{
+		
+		border:1px solid black;
+		padding: 12px 15px;
+	}
+	th{
+		background-color: #009879;
+    color: #ffffff;
+    padding: 12px 15px;
+	}
+	
+	tr::nth-of-type(even)
+	{
+	background-color: #f3f3f3;
+	}
+	
+	tr::last-of-type{
+	border-bottom: 2px solid #009879;
+	}
+	
+	</style>
+</head>
+<body>
+
+<header>  
+<nav>  
+<ul class="nav">  
+<li><a href="index.html"> Home </a></li>   
+<li><a href="AdminLogin.html">Login As Admin</a></li>  
+<li><a href="UserLogin.html">Login as<span> User</span></a></li>  
+<li><a href="UserRegister.html">New User ? Register Here</a></li>  
+</ul>  
+</nav>  
+<a class="cta" href="Contact.html"><button>Contact US</button></a>
+</header>  
+
+
+	<div id="topmid">
+		<h1>Check Books here!</h1>
+	</div>
+	
+	
+	<!-- <div class="home">
+		<a href="index.html">Home</a>
+	</div>
+
+	<div class="home">
+		<a href="index.html">Login</a>
+	</div>-->
+	
+	<!-- <div class="home">
+		<a href="viewbook">Books Available</a>
+	</div>-->
+
+	<!-- div class="home">
+		<a href="index.html">Logout</a>
+	</div>-->
+	
+</body>
+</html>
